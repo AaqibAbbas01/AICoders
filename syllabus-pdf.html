@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Coders - Comprehensive Course Syllabus</title>
+    <style>
+        /* Global Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+        
+        :root {
+            --primary: #06b6d4;
+            --primary-light: #67e8f9;
+            --primary-dark: #0891b2;
+            --secondary: #a855f7;
+            --dark-bg: #111827;
+            --dark-card: #1f2937;
+            --text-light: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: rgba(6, 182, 212, 0.3);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: white;
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            color: #111;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-light);
+            color: var(--primary-dark);
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Layout Components */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        
+        .career-impact {
+            background-color: rgba(6, 182, 212, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .career-impact h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        
+        .career-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .career-item {
+            background-color: rgba(6, 182, 212, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 8px;
+            text-align: center;
+            color: var(--primary-dark);
+        }
+        
+        .module {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        
+        .module-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .module-number {
+            background-color: var(--primary-dark);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+        }
+        
+        .module-title {
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+        
+        .module-description {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .section-list {
+            list-style-type: none;
+            margin-left: 0;
+        }
+        
+        .section-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .section-list li:before {
+            content: "•";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .section-heading {
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: var(--secondary);
+        }
+        
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+        }
+        
+        @media print {
+            body {
+                padding: 20px;
+            }
+            
+            .module {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            
+            h1, h2, h3 {
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">&lt;AI<span>Coders</span>/&gt;</div>
+        <h1>Comprehensive Course Syllabus</h1>
+        <p class="tagline">
+            Master the art of creating and testing modern software applications, leveraging AI to supercharge your development and testing capabilities. From building robust applications to implementing cutting-edge automation - embrace the future of tech with AI as your co-pilot.
+        </p>
+    </div>
+    
+    <div class="career-impact">
+        <h3>Career Impact</h3>
+        <p>
+            Upon completion of this comprehensive course, you'll be equipped with cutting-edge skills in software development, testing, and AI integration. You'll be prepared to take on roles such as:
+        </p>
+        <div class="career-grid">
+            <div class="career-item">AI Automation Engineer</div>
+            <div class="career-item">Test Automation Engineer</div>
+            <div class="career-item">QA Automation Specialist</div>
+            <div class="career-item">AI Engineer</div>
+            <div class="career-item">AI Integration Specialist</div>
+            <div class="career-item">Technical Lead</div>
+        </div>
+    </div>
+    
+    <div class="module">
+        <div class="module-header">
+            <div class="module-number">1</div>
+            <h2 class="module-title">Software Development Fundamentals</h2>
+        </div>
+        <p class="module-description">
+            Master the core principles of modern software development, from frontend to backend. Learn to build responsive web applications, understand server-side architecture, and implement robust database solutions.
+        </p>
+        <h3 class="section-heading">What You'll Learn:</h3>
+        <ul class="section-list">
+            <li>Frontend Development (HTML5, CSS3, JavaScript)</li>
+            <li>Backend Architecture and RESTful Services</li>
+            <li>Database Design and Management</li>
+            <li>API Design and Implementation</li>
+            <li>Error Handling and Debugging Strategies</li>
+            <li>Console Operations and Logging</li>
+            <li>Network Architecture and Protocols</li>
+        </ul>
+    </div>
+    
+    <div class="module">
+        <div class="module-header">
+            <div class="module-number">2</div>
+            <h2 class="module-title">Software Testing Foundation</h2>
+        </div>
+        <p class="module-description">
+            Develop a strong foundation in software testing methodologies. Understand the complete software development and testing life cycles, and learn industry-standard practices.
+        </p>
+        <h3 class="section-heading">What You'll Learn:</h3>
+        <ul class="section-list">
+            <li>SDLC (Software Development Life Cycle)</li>
+            <li>STLC (Software Testing Life Cycle)</li>
+            <li>Testing Principles and Methodologies</li>
+            <li>Types of Testing (Unit, Integration, System, UAT)</li>
+            <li>Test Case Design Techniques</li>
+            <li>Risk-Based Testing Approaches</li>
+            <li>Test Planning and Strategy</li>
+        </ul>
+    </div>
+    
+    <div class="module">
+        <div class="module-header">
+            <div class="module-number">3</div>
+            <h2 class="module-title">Advanced Debugging & Troubleshooting</h2>
+        </div>
+        <p class="module-description">
+            Gain expertise in advanced debugging techniques using modern tools and methodologies. Learn to investigate and resolve complex software issues.
+        </p>
+        <h3 class="section-heading">What You'll Learn:</h3>
+        <ul class="section-list">
+            <li>Browser Developer Tools Mastery</li>
+            <li>Network Call Analysis and Debugging</li>
+            <li>Console Error Investigation</li>
+            <li>Performance Profiling</li>
+            <li>Memory Leak Detection</li>
+            <li>Cross-browser Compatibility Testing</li>
+            <li>Security Testing Fundamentals</li>
+        </ul>
+    </div>
+    
+    <div class="module">
+        <div class="module-header">
+            <div class="module-number">4</div>
+            <h2 class="module-title">API Testing & Automation</h2>
+        </div>
+        <p class="module-description">
+            Master comprehensive API testing strategies using both manual and automated approaches with Postman and Playwright.
+        </p>
+        <h3 class="section-heading">What You'll Learn:</h3>
+        <ul class="section-list">
+            <li>Postman for Manual API Testing</li>
+            <li>REST API Testing Fundamentals</li>
+            <li>API Authentication Methods</li>
+            <li>Playwright API Testing Framework</li>
+            <li>API Mocking and Stubbing</li>
+            <li>Performance Testing for APIs</li>
+            <li>API Security Testing</li>
+        </ul>
+    </div>
+    
+    <div class="module">
+        <div class="module-header">
+            <div class="module-number">5</div>
+            <h2 class="module-title">UI Automation with Playwright</h2>
+        </div>
+        <p class="module-description">
+            Learn to create reliable, maintainable test suites that can run across multiple browsers using Playwright.
+        </p>
+        <h3 class="section-heading">What You'll Learn:</h3>
+        <ul class="section-list">
+            <li>Playwright Architecture and Setup</li>
+            <li>Locator Strategies and Best Practices</li>
+            <li>Page Object Model Implementation</li>
+            <li>Test Data Management</li>
+            <li>Visual Testing and Snapshots</li>
+            <li>Cross-browser Testing</li>
+            <li>Parallel Test Execution</li>
+        </ul>
+    </div>
+    
+    <div class="module">
+        <div class="module-header">
+            <div class="module-number">6</div>
+            <h2 class="module-title">AI-Powered Testing</h2>
+        </div>
+        <p class="module-description">
+            Harness the power of AI to enhance your testing capabilities with MCP Server integration and intelligent test automation.
+        </p>
+        <h3 class="section-heading">What You'll Learn:</h3>
+        <ul class="section-list">
+            <li>MCP Server Integration</li>
+            <li>AI-Assisted Test Case Generation</li>
+            <li>Automated Test Script Writing</li>
+            <li>Smart Test Maintenance</li>
+            <li>AI-Based Test Analysis</li>
+            <li>Failure Analysis and Reporting</li>
+            <li>Continuous Learning and Optimization</li>
+        </ul>
+    </div>
+    
+    <div class="module">
+        <div class="module-header">
+            <div class="module-number">7</div>
+            <h2 class="module-title">Version Control & CI/CD</h2>
+        </div>
+        <p class="module-description">
+            Master version control with Git and GitHub Desktop, and implement continuous integration and deployment pipelines.
+        </p>
+        <h3 class="section-heading">What You'll Learn:</h3>
+        <ul class="section-list">
+            <li>Git Fundamentals and Workflow</li>
+            <li>GitHub Desktop Operations</li>
+            <li>Branch Management Strategies</li>
+            <li>Jenkins Pipeline Setup</li>
+            <li>CI/CD Pipeline Configuration</li>
+            <li>Automated Test Integration</li>
+            <li>Deployment Strategies</li>
+        </ul>
+    </div>
+    
+    <div class="module">
+        <div class="module-header">
+            <div class="module-number">8</div>
+            <h2 class="module-title">AI Integration & Future Skills</h2>
+        </div>
+        <p class="module-description">
+            Prepare for the future with advanced AI integration skills, prompt engineering, and AI-assisted development practices.
+        </p>
+        <h3 class="section-heading">What You'll Learn:</h3>
+        <ul class="section-list">
+            <li>AI Tools for Development</li>
+            <li>Prompt Engineering</li>
+            <li>Agent Mode Operations</li>
+            <li>AI-Assisted Debugging</li>
+            <li>Automated Code Review</li>
+            <li>Future of AI in Testing</li>
+            <li>Career Path and Growth</li>
+        </ul>
+    </div>
+    
+    <div class="footer">
+        <p>© 2023 AI Coders. All rights reserved.</p>
+        <p>For inquiries, contact: <a href="mailto:aaqib817819@gmail.com">aaqib817819@gmail.com</a></p>
+    </div>
+</body>
+</html> 
