@@ -73,7 +73,7 @@ export default function Testimonials() {
         <div className="text-center mb-12">
           <span className="text-sm font-mono font-semibold text-cyan-400 uppercase tracking-wider mb-1 block">&gt; feedback.log</span>
           <h2 className="text-3xl md:text-4xl font-bold mb-3 font-mono text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">What Our Students Say</h2>
-          <p className="text-gray-400 dark:text-gray-400 max-w-2xl mx-auto font-light">
+          <p className="text-gray-400 max-w-2xl mx-auto font-light">
             Hear from our graduates who have transformed their testing careers with AI-enhanced automation skills
           </p>
         </div>

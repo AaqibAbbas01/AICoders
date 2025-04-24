@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} dark:bg-gray-900 dark:text-gray-200`}>
+      <body className={`${inter.className} bg-gray-900 text-gray-200`}>
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">{children}</main>

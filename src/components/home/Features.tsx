@@ -11,19 +11,21 @@ function FeatureCard({ icon, title, description, index }: FeatureCardProps) {
   
   return (
     <div 
-      className="ai-card bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all dark:border dark:border-gray-700"
+      className="ai-card bg-gray-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-700"
       style={{ animationDelay }}
     >
-      <div className="flex items-start mb-5">
-        <div className="rounded-full bg-indigo-100 dark:bg-indigo-900/30 p-3 w-12 h-12 flex items-center justify-center mr-4">
-          <i className={`${icon} pi-spin text-indigo-600 dark:text-indigo-400`} style={{ fontSize: '1.5rem' }}></i>
+      <div className="flex items-center mb-4">
+        <div className="rounded-full bg-indigo-900/30 p-3 w-12 h-12 flex items-center justify-center mr-4">
+          <i className={`${icon} pi-spin text-indigo-400`} style={{ fontSize: '1.5rem' }}></i>
         </div>
-        <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{title}</h3>
+        <div>
+          <h3 className="text-xl font-semibold text-white">{title}</h3>
+        </div>
       </div>
-      <p className="text-gray-600 dark:text-gray-300">{description}</p>
+      <p className="text-gray-300">{description}</p>
       
       {/* Visual details */}
-      {/* <div className="mt-4 flex items-center text-indigo-600 dark:text-indigo-400">
+      {/* <div className="mt-4 flex items-center text-indigo-400">
         <i className="pi pi-plus-circle mr-1" style={{ fontSize: '1rem' }}></i>
         <span className="text-sm font-medium">Learn more</span>
       </div> */}
@@ -69,9 +71,9 @@ export default function Features() {
     <section className="py-20 pattern-bg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">Why Choose Our Course</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-gray-900 dark:text-white">Next-Gen Testing Skills</h2>
-          <p className="max-w-2xl mx-auto text-xl text-gray-600 dark:text-gray-300">
+          <span className="text-sm font-semibold text-indigo-400 uppercase tracking-wider">Why Choose Our Course</span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4 text-white">Next-Gen Testing Skills</h2>
+          <p className="max-w-2xl mx-auto text-xl text-gray-300">
             Our comprehensive program combines the latest automation tools with practical skills that employers demand.
           </p>
           <div className="h-1 w-24 bg-indigo-600 mx-auto mt-6"></div>
