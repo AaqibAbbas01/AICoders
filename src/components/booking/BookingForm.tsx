@@ -5,11 +5,13 @@ import { useForm } from 'react-hook-form';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/Button';
 import Calendar from '@/components/booking/Calendar';
+import CountryCodeSelect from '@/components/booking/CountryCodeSelect';
 
 type FormValues = {
   fullName: string;
   email: string;
   phoneNumber: string;
+  countryCode: string;
   preferredDate: string;
   message: string;
 };
@@ -18,10 +20,14 @@ export default function BookingForm() {
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<FormValues>({
-    mode: 'onSubmit' // Ensure validation only happens on submit
+    mode: 'onSubmit',
+    defaultValues: {
+      countryCode: '+91' // Default to India
+    }
   });
   
   const selectedDate = watch('preferredDate');
+  const countryCode = watch('countryCode');
 
   const onSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
@@ -55,7 +61,7 @@ export default function BookingForm() {
 
   // Safely handle date selection without form submission
   const handleDateSelect = (date: string) => {
-    setValue('preferredDate', date, { shouldValidate: false }); // Set value without triggering validation
+    setValue('preferredDate', date, { shouldValidate: false });
   };
 
   // Handle the form submission event
@@ -64,8 +70,8 @@ export default function BookingForm() {
   return (
     <form 
       onSubmit={(e) => {
-        e.preventDefault(); // Explicitly prevent default form submission
-        formSubmit(e); // Then manually submit via react-hook-form
+        e.preventDefault();
+        formSubmit(e);
       }} 
       className="space-y-6"
     >
@@ -109,14 +115,15 @@ export default function BookingForm() {
         <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-300 mb-1">
           Phone Number *
         </label>
-        <div className="relative">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <span className="text-gray-400">+91</span>
-          </div>
+        <div className="flex">
+          <CountryCodeSelect
+            value={countryCode}
+            onChange={(code) => setValue('countryCode', code)}
+          />
           <input
             id="phoneNumber"
             type="tel"
-            className={`w-full pl-12 px-4 py-2 bg-gray-700 border rounded-md focus:ring-cyan-500 focus:border-cyan-500 text-white ${errors.phoneNumber ? 'border-red-500' : 'border-gray-600'}`}
+            className={`flex-1 px-4 py-2 bg-gray-700 border border-gray-600 rounded-r-md focus:ring-cyan-500 focus:border-cyan-500 text-white ${errors.phoneNumber ? 'border-red-500' : 'border-gray-600'}`}
             {...register('phoneNumber', { 
               required: 'Phone number is required',
               pattern: {
