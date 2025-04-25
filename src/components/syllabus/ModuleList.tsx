@@ -26,6 +26,44 @@ export default function ModuleList({ modules }: ModuleListProps) {
   
   return (
     <div className="space-y-6">
+      <div className="bg-gray-900/50 p-4 rounded-lg border border-cyan-500/20 mb-8 overflow-hidden">
+        <div className="flex items-center space-x-4 animate-marquee whitespace-nowrap">
+          <span className="text-cyan-400 font-semibold">Prerequisites:</span>
+          <span className="text-gray-300">Bachelor of Technology (B.Tech)</span>
+          <span className="text-cyan-500">•</span>
+          <span className="text-gray-300">Bachelor of Engineering (BE)</span>
+          <span className="text-cyan-500">•</span>
+          <span className="text-gray-300">Bachelor of Computer Applications (BCA)</span>
+          <span className="text-cyan-500">•</span>
+          <span className="text-gray-300">Master of Computer Applications (MCA)</span>
+          <span className="text-cyan-500">•</span>
+          <span className="text-gray-300">Bachelor of Science (B.Sc) in Computer Science</span>
+          <span className="text-cyan-500">•</span>
+          <span className="text-gray-300">Or equivalent technical degree</span>
+        </div>
+      </div>
+
+      <div className="bg-gray-900/50 p-4 rounded-lg border border-cyan-500/20 mb-8 overflow-hidden">
+        <div className="flex items-center space-x-4 animate-marquee whitespace-nowrap">
+          <span className="text-cyan-400 font-semibold">Career Impact:</span>
+          <span className="text-gray-300">AI/ML Engineer</span>
+          <span className="text-cyan-500">•</span>
+          <span className="text-gray-300">Data Scientist</span>
+          <span className="text-cyan-500">•</span>
+          <span className="text-gray-300">Machine Learning Specialist</span>
+          <span className="text-cyan-500">•</span>
+          <span className="text-gray-300">Research Scientist</span>
+          <span className="text-cyan-500">•</span>
+          <span className="text-gray-300">AI Product Manager</span>
+          <span className="text-cyan-500">•</span>
+          <span className="text-gray-300">Deep Learning Engineer</span>
+          <span className="text-cyan-500">•</span>
+          <span className="text-gray-300">Computer Vision Engineer</span>
+          <span className="text-cyan-500">•</span>
+          <span className="text-gray-300">NLP Engineer</span>
+        </div>
+      </div>
+
       {modules.map((module) => (
         <div 
           key={module.id} 

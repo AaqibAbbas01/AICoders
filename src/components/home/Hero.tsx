@@ -37,7 +37,7 @@ export default function Hero() {
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
-                <div className="mx-auto text-xs text-gray-400 font-mono">AI-Coders@root:~</div>
+                <div className="mx-auto text-xs text-gray-400 font-mono">AI-Coders_Hub@root:~</div>
               </div>
               <div className="p-4 font-mono">
                 <p className="text-cyan-400 mb-1">$ <span className="typing-animation">initiating-course-module</span></p>

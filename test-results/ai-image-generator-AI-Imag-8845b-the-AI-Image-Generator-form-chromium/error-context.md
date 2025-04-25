@@ -22,7 +22,7 @@ Call log:
 
 ```yaml
 - banner:
-  - link "<AICoders/>":
+  - link "<AICodersHub/>":
     - /url: /
   - navigation:
     - link "01.Home":
@@ -43,7 +43,7 @@ Call log:
   - heading "404" [level=1]
   - heading "This page could not be found." [level=2]
 - contentinfo:
-  - heading "<AICoders/>" [level=3]
+  - heading "<AICodersHub/>" [level=3]
   - paragraph: Empowering the next generation of automation engineers with comprehensive training in Playwright, Manual Testing, and AI Integration.
   - heading "> Quick_Links" [level=4]
   - list:

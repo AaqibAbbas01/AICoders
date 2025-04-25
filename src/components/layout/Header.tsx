@@ -46,9 +46,9 @@ export default function Header() {
             <div className="relative">
               <span className="absolute -inset-1 rounded-full bg-cyan-600/20 blur group-hover:bg-cyan-600/30 transition-all duration-300"></span>
               <div className="relative font-mono font-bold text-xl bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                <span className="text-cyan-500">&lt;</span>
+                <span className="text-white-500">&lt;</span>
                 AI<span className="text-purple-500">Coders</span>
-                <span className="text-cyan-500">/&gt;</span>
+                <span className="text-cyan-500">Hub/&gt;</span>
               </div>
             </div>
           </Link>

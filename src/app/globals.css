@@ -342,3 +342,16 @@ input:focus, select:focus, textarea:focus {
   border-radius: 6px;
   color: #e1e1ff;
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}

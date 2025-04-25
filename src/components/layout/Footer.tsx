@@ -27,8 +27,8 @@ export default function Footer() {
             
             <h3 className="text-xl font-bold mb-4 font-mono">
               <span className="text-cyan-400">&lt;</span>
-              Tech<span className="text-purple-400">Institute</span>
-              <span className="text-cyan-400">/&gt;</span>
+              AI<span className="text-purple-400"> Coders</span>
+              <span className="text-cyan-400">Hub/&gt;</span>
             </h3>
             <p className="text-gray-300 mb-4 font-light">
               Empowering the next generation of automation engineers with comprehensive training in Playwright, Manual Testing, and AI Integration.
