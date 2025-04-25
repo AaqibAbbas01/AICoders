@@ -5,9 +5,13 @@ const waitForNavigation = async (page: Page): Promise<void> => {
   await page.waitForLoadState('networkidle');
 };
 
-test.describe('AI Coders Website Tests', () => {
+test.describe('AI Coders Hub Website Tests', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:3000');
+    await page.goto('/');
+  });
+
+  test('homepage has correct title', async ({ page }) => {
+    await expect(page).toHaveTitle(/AI Coders Hub/);
   });
 
   test('Home page loads with key elements', async ({ page }) => {

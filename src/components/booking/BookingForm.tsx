@@ -109,19 +109,29 @@ export default function BookingForm() {
         <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-300 mb-1">
           Phone Number *
         </label>
-        <input
-          id="phoneNumber"
-          type="tel"
-          className={`w-full px-4 py-2 bg-gray-700 border rounded-md focus:ring-cyan-500 focus:border-cyan-500 text-white ${errors.phoneNumber ? 'border-red-500' : 'border-gray-600'}`}
-          {...register('phoneNumber', { 
-            required: 'Phone number is required',
-            pattern: {
-              value: /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/i,
-              message: 'Invalid phone number format'
-            }
-          })}
-          placeholder="e.g. +1 (123) 456-7890"
-        />
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <span className="text-gray-400">+91</span>
+          </div>
+          <input
+            id="phoneNumber"
+            type="tel"
+            className={`w-full pl-12 px-4 py-2 bg-gray-700 border rounded-md focus:ring-cyan-500 focus:border-cyan-500 text-white ${errors.phoneNumber ? 'border-red-500' : 'border-gray-600'}`}
+            {...register('phoneNumber', { 
+              required: 'Phone number is required',
+              pattern: {
+                value: /^[0-9]{10}$/,
+                message: 'Please enter a valid 10-digit phone number'
+              },
+              maxLength: {
+                value: 10,
+                message: 'Phone number must be 10 digits'
+              }
+            })}
+            placeholder="Enter 10-digit number"
+            maxLength={10}
+          />
+        </div>
         {errors.phoneNumber && (
           <p className="mt-1 text-sm text-red-400">{errors.phoneNumber.message}</p>
         )}

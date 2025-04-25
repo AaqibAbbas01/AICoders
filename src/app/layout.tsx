@@ -9,7 +9,7 @@ import FloatingCTA from "@/components/shared/FloatingCTA";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI Coders - Playwright Automation & AI Integration",
+  title: "AI Coders Hub - Playwright Automation & AI Integration",
   description: "Learn Playwright automation and AI integration to supercharge your testing skills",
 };
 

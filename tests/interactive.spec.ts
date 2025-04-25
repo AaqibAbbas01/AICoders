@@ -62,7 +62,7 @@ test.describe('Interactive User Flows', () => {
     await expect(page.getByRole('heading', { name: 'Contact Us & FAQs' })).toBeVisible();
     
     // Go back to home
-    await page.getByRole('link', { name: 'AICoders' }).click();
+    await page.getByRole('link', { name: 'AI Coders Hub' }).click();
     await expect(page).toHaveURL('/');
     
     // Take a screenshot of desktop navigation
@@ -132,5 +132,10 @@ test.describe('Interactive User Flows', () => {
       // Take screenshot of expanded FAQ
       await page.screenshot({ path: `./screenshots/faq-expanded-${i+1}.png` });
     }
+  });
+
+  test('should navigate to home page when clicking logo', async ({ page }) => {
+    await page.getByRole('link', { name: 'AI Coders Hub' }).click();
+    await expect(page).toHaveURL('/');
   });
 }); 

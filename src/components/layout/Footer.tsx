@@ -115,10 +115,9 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-700 text-center">
-          <div className="text-sm text-gray-400 mt-8">
-            © {new Date().getFullYear()}
-            <span className="text-cyan-500"> AI Coders // </span>
-            All rights reserved
+          <div className="text-center text-sm text-gray-400">
+            <span className="text-cyan-500"> AI Coders Hub // </span>
+            <span>© {new Date().getFullYear()} All rights reserved.</span>
           </div>
         </div>
       </div>
